@@ -58,11 +58,11 @@ class ArtworkRecognizer:
         references_json: Path = REFERENCES_JSON,
         index_dir: Path = INDEX_DIR,
         max_image_dimension: int = 1400,
-        min_good_matches: int = 30,
-        min_inliers: int = 25,
-        min_inlier_ratio: float = 0.22,
-        min_inlier_margin: int = 12,
-        min_confidence_margin: float = 0.12,
+        min_good_matches: int = 12,
+        min_inliers: int = 10,
+        min_inlier_ratio: float = 0.12,
+        min_inlier_margin: int = 4,
+        min_confidence_margin: float = 0.04,
     ) -> None:
         self.references_json = references_json
         self.index_dir = index_dir
@@ -300,7 +300,7 @@ class ArtworkRecognizer:
             raw_matches = []
 
         good_matches = []
-        ratio = 0.74
+        ratio = 0.82
 
         for pair in raw_matches:
             if len(pair) < 2:
