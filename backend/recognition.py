@@ -62,7 +62,7 @@ class ArtworkRecognizer:
         min_inliers: int = 10,
         min_inlier_ratio: float = 0.12,
         min_inlier_margin: int = 4,
-        min_confidence_margin: float = 0.04,
+        min_confidence_margin: float = 0.01,
     ) -> None:
         self.references_json = references_json
         self.index_dir = index_dir
